@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Mengyu Calendar Widget</title>
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<script type="text/template" id="template-day">
+			<a type="button" target="_self" href="javascript:void(0);" aria-label="Day">
+				<strong><%= date %></strong>
+				<span>2+</span>
+				<i class="ellipsis">holidays</i>
+			</a>
+		</script>
+		<script type="text/template" id="template-note-item">
+			<li><a href="javascript:void(0);" target="_self" class="ellipsis"><span>»</span><%= content %></a></li>
+		</script>
+
+	</head>
+	<body>
+		<section class="cao-calendar">
+			<h1 class="cc-title"><img src="res/canlendar.png"></h1>
+			<ul class="cc-holidays clearfix" id="cc-holidays">
+				<li class="title">Holidays:</li>
+				<li class="us"><a href="javascript:void(0);">US</a></li>
+				<li class="ca"><a href="javascript:void(0);">CA</a></li>
+				<li class="gb"><a href="javascript:void(0);">GB</a></li>
+				<li class="fr"><a href="javascript:void(0);">FR</a></li>
+				<li class="br"><a href="javascript:void(0);">BR</a></li>
+			</ul>
+			<div class="cc-pick clearfix">
+				<div class="ccp-left" id="ccp-left"><a href="javascript:void(0);" target="_self"></a></div>
+				<div class="ccp-center" id="ccp-center"><strong>2008</strong></div>
+				<div class="ccp-right" id="ccp-right"><a href="javascript:void(0);" target="_self"></a></div>
+			</div>
+			<div class="cc-body">
+				<div class="cc-grid" id="cc-grid">
+					<ul class="ccg-header clearfix">
+						<li class="header-day header-first"><img src="res/s.png"></li>
+						<li class="header-day"><img src="res/m.png"></li>
+						<li class="header-day"><img src="res/t.png"></li>
+						<li class="header-day"><img src="res/w.png"></li>
+						<li class="header-day"><img src="res/t.png"></li>
+						<li class="header-day"><img src="res/f.png"></li>
+						<li class="header-day header-last"><img src="res/s.png"></li>
+					</ul>
+					<ul class="ccg-days clearfix" id="ccg-days"></ul>
+				</div>
+				<div class="cc-note-body" id="cc-note-body">
+					<h2 class="ccnb-title clearfix">
+						<a id="ccnbt-btn-return" class="btn-return" target="_self" href="javascript:void(0);">‹ Return</a>
+						<a id="ccnbt-btn-delete" class="btn-delete" target="_self" href="javascript:void(0);">X Delete</a>
+					</h2>
+					<h6 class="ccnb-subtitle" id="ccnb-subtitle">9/22/2015</h6>
+					<textarea class="ccnb-text" id="ccnb-text"></textarea>
+				</div>
+				<aside class="cc-notes" id="cc-notes">
+					<h2 class="ccn-title clearfix">Today's Event(s)<a id="ccnt-btn-add" target="_self" href="javascript:void(0);">+ Add</a></h2>
+					<ul class="ccn-list" id="ccn-list"></ul>
+				</aside>
+			</div>
+		</section>
+		
+		<script src="lib/jquery-2.1.4.min.js"></script>
+		<script src="lib/underscore-min.js"></script>
+		<script src="lib/backbone-min.js"></script>
+		<script src="app/main.js"></script>
+	</body>
+</html>

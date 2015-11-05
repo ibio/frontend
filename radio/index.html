@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>International Radio Station Widget</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<script type="text/template" id="template-radio-item">
+			<td><a href="javascript:void(0);">Play ▶</a></td>
+			<td><%= title %></td>
+			<td><%= name %></td>
+			<td><%= country %></td>
+			<td><%= date %></td>
+		</script>
+	</head>
+	<body>
+		<div class="cao-widget">
+			<h1 class="cw-title">Mengyu's International Radio Station</h1>
+			<section class="cw-radio clearfix">
+				<p class="cwr-cover" id="cwr-cover">
+					<span></span>
+					<img src="no-image.gif" />
+				</p>
+				<div class="cwr-player">
+					<div class="cwrp-splash" id="cwrp-splash">
+						<h1 class="ellipsis">Loading...</h1>
+						<img src="res/bg.jpg" />
+					</div>
+					<div class="cwrp-btns clearfix">
+						<a id="btn-prev" class="btn-prev" href="javascript:void(0);"></a>
+						<a id="btn-play" class="btn-play" href="javascript:void(0);"></a>
+						<a id="btn-next" class="btn-next" href="javascript:void(0);"></a>
+					</div>
+				</div>
+			</section>
+			<table class="cw-playlist" id="cw-playlist">
+				<thead>
+					<tr>
+						<th class="button"></th>
+						<th class="title">Title</th>
+						<th class="name">Name</th>
+						<th class="country">Country</th>
+						<th class="date">Created At</th>
+					</tr>
+				</thead>
+				<tbody></tbody>
+			</table>
+		</div>
+		<script src="lib/jquery-2.1.4.min.js"></script>
+		<script src="lib/underscore-min.js"></script>
+		<script src="lib/backbone-min.js"></script>
+		<script src="app/main.js"></script>
+	</body>
+</html>
