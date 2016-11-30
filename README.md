@@ -8,7 +8,9 @@
 - BackboneJS
 
 ### smartpos
+- A single page web app
+- MVC architecture
 - Webpack
 - ReactJS
 - Babel ES2015
-- A single page web app
+
