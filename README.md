@@ -1,4 +1,4 @@
-# This is some frontend test codes.
-My code samples
-1 radio
-2 calendar
+# Those are some frontend sample codes
+## My code samples
+- radio
+- calendar
