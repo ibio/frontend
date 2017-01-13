@@ -13,4 +13,5 @@
 - Webpack
 - ReactJS
 - Babel ES2015
+- Sass/Scss
 
