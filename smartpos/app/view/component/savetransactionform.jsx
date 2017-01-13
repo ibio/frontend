@@ -79,9 +79,9 @@ export default class SaveTransactionForm extends React.Component {
     }
 
     return(
-			<div className="ap-savetransaction">
+			<div className="savetransaction">
         <div className="row">
-          <div className="col-xs-12 aps-detail">
+          <div className="col-xs-12 detail">
             <p>Subtotal<b>{subtotal}</b></p>
             <p>Discount<b>{discount}</b></p>
             <p>Taxes<b>0.00</b></p>
@@ -107,7 +107,7 @@ export default class SaveTransactionForm extends React.Component {
             <button type="button" className="btn btn-block btn-primary" onClick={this.handleAddPayment.bind(this)}>Add</button>
           </div>
         </div>
-        <ul className="list-group aps-paymentlist">
+        <ul className="list-group paymentlist">
           {paymentListView}
         </ul>
         

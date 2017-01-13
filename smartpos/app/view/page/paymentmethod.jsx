@@ -6,6 +6,7 @@ import Util from 'helper/util';
 import Classnames from 'lib/classnames';
 import SideMenu from 'view/component/sidemenu';
 import Breadcrumb from 'view/component/breadcrumb';
+import Style from 'style/payentmethod.scss';
 
 export default class PaymentMethod extends React.Component {
 	constructor(props) {
@@ -16,10 +17,6 @@ export default class PaymentMethod extends React.Component {
 			//
 		};
 	}
-
-	componentDidMount () {
-		$('body').css('left', 0);
-  }
 
   componentWillUnmount () {
     // this._$window.off('resize', this.handleResize.bind(this));
@@ -33,15 +30,15 @@ export default class PaymentMethod extends React.Component {
 		//
 		return(
 			<div>
-			  <div className="container-fluid a-main">
+			  <div className="container-fluid">
 			  	<div className="row">
-			  		<div className="col-sm-2 am-smcontainer">
+			  		<div className="col-sm-2 sidemenu-container">
 			  			<SideMenu navs={this.props.navs} />
 			  		</div>
-			  		<div className="col-sm-offset-2 col-sm-10 am-bcontainer">
-			  			<Breadcrumb navs={this.props.navs} parent=".am-bcontainer" />
+			  		<div className="col-sm-offset-2 col-sm-10 breadcrumb-container">
+			  			<Breadcrumb navs={this.props.navs} parent=".breadcrumb-container" />
 
-			  			<div className="row am-payment">
+			  			<div className="row paymentmethod">
 				  			<div className="col-sm-12">
 					  			<h2>To be continued ...</h2>	
 					  		</div>

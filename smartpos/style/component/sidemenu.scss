@@ -1,0 +1,47 @@
+// component sidemenu
+
+.sidemenu {
+	background-color: #3a5c9c; padding-top: 20px; height: 100vh;
+
+	.brand{
+		padding-left: 20px;
+		a{color: white;}
+	}
+
+	.nav-list{
+		padding:0; list-style: none; margin-top: 40px;
+
+
+		li {
+			position: relative;
+			a {padding:15px 0 15px 20px; width: 100%; text-align: left; border:0; border-radius:0; background-color: #395a99; color: #9fb4d0;}
+			a:hover, a:focus{color: white;}
+			i{color: #9fb4d0; position: absolute; right: 15px; top:17px;}
+
+		}
+
+		li.open{
+			a{color: white;}
+			i{color: white;}			
+		}
+
+		li.active {
+			a{background-color: #33528f; color: white; border-left: 5px #ec5356 solid; padding-left: 15px;}
+		}
+
+		li.main{
+			a {}
+		}
+
+		li.second{
+			a{padding-left: 35px;}
+		}
+
+		@media only screen and (max-width: 767px) {
+			//.a-nav .container-fluid .navbar-header .an-logo{margin-left: 20px;}
+			//.an-btnside{top: 0;}
+		}
+
+	}
+
+}

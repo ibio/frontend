@@ -1,0 +1,32 @@
+// partial styles
+// Because of the h1-h6 default issues
+// @import 'reset';
+
+
+// for general style and global style
+
+body {
+	background-color: white; 
+	font-family: 'Roboto Condensed', sans-serif; 
+	width: 100%;
+	left: 0;
+	top: 0; 
+	right: 0;
+}
+
+.ellipsis{
+	text-overflow:ellipsis; 
+	overflow:hidden; 
+	white-space:nowrap;
+}
+
+/*sidemenu-container z-index from 900 - 999*/
+/*breadcrumb z-index from 700 - 799*/
+
+.sidemenu-container{
+	position: fixed; z-index: 999; left: 0; top:0; padding: 0;
+}
+
+.breadcrumb-container{
+
+}

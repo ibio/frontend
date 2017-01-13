@@ -7,6 +7,7 @@ import CSSPlugin from 'lib/greensock/plugins/CSSPlugin';
 import TweenLite from 'lib/greensock/TweenLite';
 import Config from 'helper/config';
 import Util from 'helper/util';
+import style from 'style/component/sidemenu.scss';
 
 export default class SideMenu extends React.Component {
 	constructor(props) {
@@ -93,9 +94,9 @@ export default class SideMenu extends React.Component {
 	render() {
 		//
 		return(
-			<div className="am-sidemenu" ref="amSidemenu">
-				<p className="ams-brand"><a>CellSmart POS</a></p>
-				<ul className="ams-nav">{this.getMainNavList()}</ul>
+			<div className="sidemenu" ref="amSidemenu">
+				<p className="brand"><a>CellSmart POS</a></p>
+				<ul className="nav-list">{this.getMainNavList()}</ul>
 			</div>
 		);
 	}

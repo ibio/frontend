@@ -9,6 +9,7 @@ import Popup from 'view/component/popup';
 import SideMenu from 'view/component/sidemenu';
 import Breadcrumb from 'view/component/breadcrumb';
 import ManageProductItem from 'view/component/manageproductitem';
+import Style from 'style/product.scss';
 
 export default class Product extends React.Component {
 	constructor(props) {
@@ -23,14 +24,14 @@ export default class Product extends React.Component {
 		};
 	}
 
-	componentDidMount () {
+	componentDidMount (){
 		$('body').css('left', 0);
 		//
 		this._productModel.getProductList();
 		$('#amps-sbox').focus();
   }
 
-  componentWillUnmount () {
+  componentWillUnmount (){
     // this._$window.off('resize', this.handleResize.bind(this));
   }
 
@@ -110,35 +111,34 @@ export default class Product extends React.Component {
 		return(
 			<div>
 				<Popup ref="popup" />
-			  <div className="container-fluid a-main">
+			  <div className="container-fluid">
 			  	<div className="row">
-            <div className="col-sm-2 am-smcontainer">
+            <div className="col-sm-2 sidemenu-container">
               <SideMenu navs={this.props.navs} />
             </div>
-            <div className="col-sm-offset-2 col-sm-10 am-bcontainer">
-              <Breadcrumb navs={this.props.navs} parent=".am-bcontainer" />
-
-              <div className="amp-hr" />
-              <div className="row">
+            <div className="col-sm-offset-2 col-sm-10 breadcrumb-container">
+              <Breadcrumb navs={this.props.navs} parent=".breadcrumb-container" />
+              <div className="product-hr" />
+              <div className="row product">
                 <div className="col-sm-8">
-                  <div className="form-group amp-search">
+                  <div className="form-group search">
                     <label htmlFor="amps-sbox">Search</label>
                     <div className="clearfix">
-                      <input type="email" className="form-control pull-left amps-sbox" id="amps-sbox" onChange={this.handleSearchChange.bind(this)} placeholder="Search for items ..." />
+                      <input type="email" className="form-control pull-left sbox" id="amps-sbox" onChange={this.handleSearchChange.bind(this)} placeholder="Search for items ..." />
                       <button type="button" className="btn btn-primary">Search</button>
                     </div>
                   </div>
                 </div>
                 <div className="col-sm-4">
-                  <div className="amp-operation">
+                  <div className="operation">
                     <button type="button" className="btn btn-primary" aria-label="Create" onClick={this.handleCreateProduct.bind(this)}>Add New Item</button>
                   </div>
                 </div>
               </div>
 
-              <div className="row">
+              <div className="row product">
                 <div className="col-sm-12">
-                  <table className="table table-striped table-hover amp-list">
+                  <table className="table table-striped table-hover list">
                     <thead>
                       <tr> 
                         <th width="5%"></th> 

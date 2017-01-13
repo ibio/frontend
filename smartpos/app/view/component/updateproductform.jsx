@@ -58,22 +58,22 @@ export default class UpdateProductForm extends React.Component {
 	render () {
     const imgView = this.props.thumb ? this.props.thumb : 'res/empty-item-img.png';
     return(
-			<div className="ap-updateproduct">
+			<div className="updateproduct">
         <div className="row">
           <div className="col-xs-12"><h3>1. PRODUCT INFORMATION</h3></div>
           <div className="col-xs-2">
             <img src={imgView} className="img-responsive" />
-            <button type="button" className="btn btn-primary apu-upload" disabled aria-label="Upload">
+            <button type="button" className="btn btn-primary upload" disabled aria-label="Upload">
               <span className="glyphicon glyphicon-upload" aria-hidden="true"></span> Upload
             </button>
           </div>
           <div className="col-xs-10">
             <div className="row">
               <div className="col-xs-6">
-                <div className="form-group apu-code">
+                <div className="form-group code">
                   <label htmlFor="updateproduct-upc-code">UPC code</label>
                   <input type="text" className="form-control" id="updateproduct-upc-code" defaultValue={0} placeholder="0" />
-                  <button type="button" className="btn btn-primary apuc-generate" disabled aria-label="Generate">Generate</button>
+                  <button type="button" className="btn btn-primary generate" disabled aria-label="Generate">Generate</button>
                 </div>
               </div>
               <div className="col-xs-6">
@@ -101,9 +101,9 @@ export default class UpdateProductForm extends React.Component {
         <div className="row">
           <div className="col-xs-6">
             <h3>2. BARCODES</h3>
-            <div className="form-group apu-code">
+            <div className="form-group code">
               <input type="text" className="form-control" id="updateproduct-quantity" defaultValue={0} placeholder="0" />
-              <button type="button" className="btn btn-primary apuc-generate" disabled aria-label="Add">Add</button>
+              <button type="button" className="btn btn-primary generate" disabled aria-label="Add">Add</button>
             </div>
           </div>
           <div className="col-xs-6">

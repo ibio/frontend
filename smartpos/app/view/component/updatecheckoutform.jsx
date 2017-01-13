@@ -64,7 +64,7 @@ export default class UpdateCheckoutForm extends React.Component {
 
 	render () {
     return(
-			<div className="ap-updatecheckout" onChange={this.handleValueChange.bind(this)}>
+			<div className="updatecheckout" onChange={this.handleValueChange.bind(this)}>
         <div className="row">
           <div className="col-xs-6">
             <div className="form-group">
@@ -83,11 +83,11 @@ export default class UpdateCheckoutForm extends React.Component {
         <div className="form-group">
           <label htmlFor="updatecheckout-discount">Discount</label>
           <div className="apu-option">
-            <input type="number" className="form-control apuo-input" id="updatecheckout-discount" defaultValue={this.props.item.discount} placeholder="0" />
-            <label className="radio-inline apuo-radio">
+            <input type="number" className="form-control input" id="updatecheckout-discount" defaultValue={this.props.item.discount} placeholder="0" />
+            <label className="radio-inline radio">
               <input type="radio" name="updatecheckout-option" value={OP_DOLLAR} defaultChecked={true} /> $
             </label>
-            <label className="radio-inline apuo-radio">
+            <label className="radio-inline radio">
               <input type="radio" name="updatecheckout-option" value={OP_PERCENTAGE} /> %
             </label>
           </div>

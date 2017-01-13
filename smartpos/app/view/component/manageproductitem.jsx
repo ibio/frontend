@@ -30,7 +30,7 @@ export default class ManageProductItem extends React.Component {
     return(
       <tr onClick={this.handleItemClick.bind(this)}>
         <td>
-          <button type="button" className="btn ampl-favorite" aria-label="Favorite" ref="amplFavorite" onClick={this.props.onFavorite}>
+          <button type="button" className="btn favorite" aria-label="Favorite" ref="amplFavorite" onClick={this.props.onFavorite}>
             <span className={Classnames('glyphicon', {'glyphicon-heart' : this.props.favorite, 'glyphicon-heart-empty' : !this.props.favorite})} aria-hidden="true"></span>
           </button>
         </td>
@@ -40,13 +40,13 @@ export default class ManageProductItem extends React.Component {
         <td>{this.props.balanceQuantity}</td> 
         <td>{this.props.salePrice}</td> 
         <td>
-          <button type="button" className={Classnames('btn', 'ampl-active', {'btn-primary' : this.props.active, 'btn-warning' : !this.props.active})} aria-label="Active" ref="amplActive" onClick={this.props.onActivate}>{activeView}</button>
+          <button type="button" className={Classnames('btn', 'active', {'btn-primary' : this.props.active, 'btn-warning' : !this.props.active})} aria-label="Active" ref="amplActive" onClick={this.props.onActivate}>{activeView}</button>
         </td> 
         <td>
-          <button type="button" className="btn ampl-modify" aria-label="Modify" ref="amplModify" onClick={this.props.onModify}>
+          <button type="button" className="btn modify" aria-label="Modify" ref="amplModify" onClick={this.props.onModify}>
             <span className="glyphicon glyphicon-pencil" aria-hidden="true"></span>
           </button>
-          <button type="button" className="btn ampl-remove" aria-label="Remove" ref="amplRemove" onClick={this.props.onRemove}>
+          <button type="button" className="btn remove" aria-label="Remove" ref="amplRemove" onClick={this.props.onRemove}>
             <span className="glyphicon glyphicon-remove" aria-hidden="true"></span>
           </button>
         </td> 

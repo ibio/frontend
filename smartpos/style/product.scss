@@ -1,0 +1,26 @@
+// product
+
+.product-hr{margin-top: 60px;}
+
+.product{
+	
+	.search{
+		background-color: #d7deed; margin-top: 15px; margin-left: 0; padding: 15px;
+		.sbox{width: calc(100% - 77px); margin-right: 5px;}
+	}
+	.list{
+		tbody{
+			tr {
+				td{height: 51px; line-height: 51px;}
+			}
+		
+			.favorite, .modify, .remove{
+				background-color: unset;
+				span{pointer-events: none}
+			}
+		}
+	}
+
+	.operation {margin-top: 15px; padding-top: 40px;}
+}
+

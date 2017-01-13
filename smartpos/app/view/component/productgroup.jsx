@@ -27,8 +27,8 @@ export default class ProductGroup extends React.Component {
       //
       return (
         <div key={Util.uuid()}>
-          <h5>{item.name}</h5>
-          <ul className="am-productlist">
+          <h5 className="title">{item.name}</h5>
+          <ul className="productlist">
             {productList}
           </ul>
         </div>
@@ -36,7 +36,7 @@ export default class ProductGroup extends React.Component {
     }, this);
     //
     return(
-			<div className="am-productgroup">{list}</div>
+			<div className="productgroup">{list}</div>
 		);
 	}
 

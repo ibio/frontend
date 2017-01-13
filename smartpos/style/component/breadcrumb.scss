@@ -1,0 +1,15 @@
+// component breadcrumb
+
+.breadcrumb {
+	z-index: 799; height: 50px; background-color: #eaebeb; padding-top: 5px; padding-left: 5px;
+
+	ul {
+		padding:0; list-style: none;
+		
+		li {
+			float: left;
+			a {color: #666d6d;}
+		}
+	}
+
+}

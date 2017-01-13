@@ -12,7 +12,7 @@ export default class SaleProductItem extends React.Component {
 
 	render () {
     return(
-			<li className={Classnames("amp-item", {'amp-active':false})} onClick={this.props.onClick}>
+			<li className={Classnames("item", {'active':false})} onClick={this.props.onClick}>
         <figure>
           <img src={this.props.thumb} alt={this.props.name} className="img-responsive center-block" />
           <figcaption>

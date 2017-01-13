@@ -11,6 +11,7 @@ import Breadcrumb from 'view/component/breadcrumb';
 import ProductGroup from 'view/component/productgroup';
 import Popup from 'view/component/popup';
 import Checkout from 'view/component/checkout';
+import Style from 'style/newsale.scss';
 
 export default class NewSale extends React.Component {
 	constructor(props) {
@@ -33,7 +34,6 @@ export default class NewSale extends React.Component {
 	componentDidMount () {
 		this._productModel.getFavoriteLabelList();
 		this._productModel.getProductList(true);
-		$('body').css('left', 0);
 		$('#ams-sbox').focus();
   }
 
@@ -86,7 +86,7 @@ export default class NewSale extends React.Component {
 	render() {
 		const title = $('#ams-sbox').val() === '' ? 'Favorite Labels' : 'Search result(s):';
 		var totalItems = 0;
-		this.state.checkoutItemList.forEach(function (item) {
+		this.state.checkoutItemList.forEach(function (item){
 			totalItems += item.quantity;
 		}, this);
 		return(
@@ -94,48 +94,48 @@ export default class NewSale extends React.Component {
 				<Popup ref="popup" />
 			  <div className="container-fluid a-main">
 			  	<div className="row">
-			  		<div className="col-sm-2 am-smcontainer">
+			  		<div className="col-sm-2 sidemenu-container">
 			  			<SideMenu navs={this.props.navs} />
 			  		</div>
-			  		<div className="col-sm-offset-2 col-sm-10 am-bcontainer">
-			  			<Breadcrumb navs={this.props.navs} parent=".am-bcontainer" />
+			  		<div className="col-sm-offset-2 col-sm-10 breadcrumb-container">
+			  			<Breadcrumb navs={this.props.navs} parent=".breadcrumb-container" />
 
-			  			<div className="row am-registersale">
+			  			<div className="row registersale">
 			  				<div className="col-sm-8">
-						  		<div className="row am-search">
+						  		<div className="row search">
 						  			<div className="form-group">
-									    <label htmlFor="ams-sbox">Search or scan item</label>
+									    <label htmlFor="sbox">Search or scan item</label>
 									    <div className="clearfix">
-									    	<input type="email" className="form-control pull-left ams-sbox" id="ams-sbox" onChange={this.handleSearchChange.bind(this)} placeholder="Enter item name or scan barcode ..." />
+									    	<input type="email" className="form-control pull-left sbox" id="ams-sbox" onChange={this.handleSearchChange.bind(this)} placeholder="Enter item name or scan barcode ..." />
 									    	<button type="button" className="btn btn-primary">Search</button>
 									    </div>
 									  </div>
 							  	</div>
-							  	<div className="row am-operation">
+							  	<div className="row result">
 					  				<h4>{title}</h4>
 					  			</div>
 					  			<ProductGroup list={this.state.productGroup} onProductClick={this.handleProductClick.bind(this)} />
 					  		</div>
 
-					  		<div className="col-sm-4 am-checkout">
-					  			<div className="form-group amc-customer">
-								    <label htmlFor="amcc-box">Search customer</label>
+					  		<div className="col-sm-4 checkout">
+					  			<div className="form-group customer">
+								    <label htmlFor="sbox">Search customer</label>
 								    <div className="clearfix">
-								    	<input type="email" className="form-control pull-left amcc-box" id="amcc-box" placeholder="eg: Joseph Yawar" />
+								    	<input type="email" className="form-control pull-left sbox" id="amcc-box" placeholder="eg: Joseph Yawar" />
 								    	<button type="button" className="btn btn-primary" disabled>Search</button>
 								    </div>
 								  </div>
 					  		
-					  			<div className="clearfix amc-note">
+					  			<div className="clearfix note">
 					  				<h4 className="pull-left">{totalItems} Cart</h4>
 					  				<button type="button" className="btn btn-primary pull-right" disabled>Add note</button>
 					  			</div>
 					  			<Checkout checkoutItemList={this.state.checkoutItemList} onItemRemove={this.handleItemRemove.bind(this)} onItemUpdate={this.handleItemUpdate.bind(this)} />
-					        <div className="clearfix amc-operation">
+					        <div className="clearfix operation">
 					  				<button type="button" className="btn btn-default pull-left" disabled>Hold</button>
 					  				<button type="button" className="btn btn-default pull-right" disabled>Cancel</button>
 					  			</div>
-					  			<div className="amc-pay">
+					  			<div className="pay">
 					  				<button type="button" className="btn btn-danger" onClick={this.handlePayClick.bind(this)}>Pay</button>
 					  			</div>
 					  		</div>

@@ -24,7 +24,7 @@ export default class RemoveProductForm extends React.Component {
 
 	render () {
     return(
-      <div className="row ap-removeproduct">
+      <div className="row removeproduct">
         <div className="col-xs-4">
           <img className="img-responsive" title={this.props.name} src={this.props.thumb} />
         </div>

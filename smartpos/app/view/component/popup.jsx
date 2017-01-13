@@ -8,6 +8,7 @@ import UpdateCheckoutForm from 'view/component/updatecheckoutform';
 import RemoveProductForm from 'view/component/removeproductform';
 import UpdateProductForm from 'view/component/updateproductform';
 import SaveTransactionForm from 'view/component/savetransactionform';
+import Style from 'style/component/popup.scss';
 
 export default class Popup extends React.Component {
   constructor(props) {
@@ -74,7 +75,7 @@ export default class Popup extends React.Component {
     }
     //
     return(
-			<div className="modal a-popout" tabIndex="-1" role="dialog" ref="modal">
+			<div className="modal popup" tabIndex="-1" role="dialog" ref="modal">
         <div className={Classnames("modal-dialog", this.state.windowSize)} role="document">
           <div className="modal-content">
             <div className="modal-header">

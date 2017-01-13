@@ -31,9 +31,9 @@ export default class OpenOrder extends React.Component {
 		//
 		return(
 			<div>
-			  <div className="container-fluid a-main">
+			  <div className="container-fluid">
 			  	<div className="row">
-			  		<div className="col-sm-2 am-smcontainer">
+			  		<div className="col-sm-2 sidemenu-container">
 			  			<SideMenu navs={this.props.navs} />
 			  		</div>
 			  		<div className="col-sm-offset-2 col-sm-10">

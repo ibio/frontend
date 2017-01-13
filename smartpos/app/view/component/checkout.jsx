@@ -42,7 +42,7 @@ export default class Checkout extends React.Component {
       subAmount += item.product.salePrice * item.quantity;
       totalDiscount += item.discount;
       return(
-        <h3 key={Util.uuid()} className={Classnames("amcc-item")} 
+        <h3 key={Util.uuid()} className={Classnames("item")} 
           onClick={this.handleItemClick.bind(this, item, index)} 
           onMouseEnter={this.handleMouseOver.bind(this)} 
           onMouseLeave={this.handleMouseOut.bind(this)} >
@@ -60,7 +60,7 @@ export default class Checkout extends React.Component {
     }
     //
     return(
-			<div className="amc-check">
+			<div className="cart">
         {checkoutItemListView}
         <footer>
           <h5>Subtotal: <b>${subAmount}</b></h5>

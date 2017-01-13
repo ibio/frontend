@@ -5,6 +5,7 @@ import _ from 'lodash';
 import Classnames from 'lib/classnames';
 import Config from 'helper/config';
 import Util from 'helper/util';
+import Style from 'style/component/breadcrumb.scss';
 
 export default class Breadcrumb extends React.Component {
 	constructor(props) {
@@ -46,7 +47,7 @@ export default class Breadcrumb extends React.Component {
 	render() {
 		//
 		return(
-			<div className="am-breadcrumb" ref="amBreadcrumb">
+			<div className="breadcrumb" ref="amBreadcrumb">
 				<ul className="clearfix">{this.getBreadcrumb()}</ul>
 			</div>
 		);
