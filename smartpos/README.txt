@@ -3,7 +3,7 @@ node v7.1.0
 npm@4.0.2
 grunt-cli v1.2.0
 
-Online Demo: http://demo.ypseek.com/
+Online Demo: http://us.ypseek.com/labs/2016/smartpos/
 
 Setup:
 1 use npm download packages
